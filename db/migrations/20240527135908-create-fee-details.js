@@ -38,7 +38,6 @@ module.exports = {
 				type: Sequelize.STRING,
 				allowNull: false,
 				defaultValue: 'pending',
-				values: ['pending', 'paid'],
 			},
 			createdAt: {
 				allowNull: false,

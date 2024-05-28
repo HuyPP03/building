@@ -135,10 +135,10 @@ export const addVehicleDetail = async (
 	next: NextFunction,
 ) => {
 	try {
-		const { householdId, typeId, registrationNumber } = req.body;
+		const { householdId, vehicleTypeId, registrationNumber } = req.body;
 		const vehicle = await managerServices.addVehicleDetail(
 			householdId,
-			typeId,
+			vehicleTypeId,
 			registrationNumber,
 		);
 		return res
@@ -156,11 +156,11 @@ export const updateVehicleDetail = async (
 ) => {
 	try {
 		const id = Number(req.params.id);
-		const { householdId, typeId, registrationNumber } = req.body;
+		const { householdId, vehicleTypeId, registrationNumber } = req.body;
 		const vehicle = await managerServices.updateVehicleDetail(
 			id,
 			householdId,
-			typeId,
+			vehicleTypeId,
 			registrationNumber,
 		);
 		return res

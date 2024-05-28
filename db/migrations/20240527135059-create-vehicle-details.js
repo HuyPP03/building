@@ -22,7 +22,7 @@ module.exports = {
 				allowNull: false,
 				unique: true,
 			},
-			typeId: {
+			vehicleTypeId: {
 				type: Sequelize.INTEGER,
 				allowNull: false,
 				references: {

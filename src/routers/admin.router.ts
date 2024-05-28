@@ -20,12 +20,12 @@ router.get('/users', adminControllers.getUsers);
 router.put('/users/:id', adminControllers.updateUser);
 router.delete('/users/:id', adminControllers.deleteUser);
 
-router.post('/fee', adminControllers.addFee);
-router.put('/fee/:id', adminControllers.updateFee);
-router.delete('/fee/:id', adminControllers.deleteFee);
+router.post('/fees', adminControllers.addFee);
+router.put('/fees/:id', adminControllers.updateFee);
+router.delete('/fees/:id', adminControllers.deleteFee);
 
-router.post('/vehicle-type', adminControllers.addVehicleType);
-router.put('/vehicle-type/:id', adminControllers.updateVehicleType);
-router.delete('/vehicle-type/:id', adminControllers.deleteVehicleType);
+router.post('/vehicle-types', adminControllers.addVehicleType);
+router.put('/vehicle-types/:id', adminControllers.updateVehicleType);
+router.delete('/vehicle-types/:id', adminControllers.deleteVehicleType);
 
 export default router;

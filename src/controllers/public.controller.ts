@@ -35,7 +35,7 @@ export const getHouseholds = async (
 ) => {
 	try {
 		const households = await publicServices.getHouseholds();
-		return households;
+		return res.status(200).json(new DataResponse(0, households, 'OK'));
 	} catch (error) {
 		next(error);
 	}
@@ -49,7 +49,7 @@ export const getHousehold = async (
 	try {
 		const id = Number(req.params.id);
 		const household = await publicServices.getHousehold(id);
-		return household;
+		return res.status(200).json(new DataResponse(0, household, 'OK'));
 	} catch (error) {
 		next(error);
 	}

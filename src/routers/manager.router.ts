@@ -6,32 +6,32 @@ const router = Router();
 
 router.use(verifyToken);
 
-router.post('/household', managerControllers.addHousehold);
-router.put('/household/:id', managerControllers.updateHousehold);
-router.delete('/household/:id', managerControllers.deleteHousehold);
+router.post('/households', managerControllers.addHousehold);
+router.put('/households/:id', managerControllers.updateHousehold);
+router.delete('/households/:id', managerControllers.deleteHousehold);
 
-router.post('/fee-detail', managerControllers.addFeeDetail);
-router.put('/fee-detail/:id', managerControllers.updateFeeDetail);
-router.delete('/fee-detail/:id', managerControllers.deleteFeeDetail);
+router.post('/fee-details', managerControllers.addFeeDetail);
+router.put('/fee-details/:id', managerControllers.updateFeeDetail);
+router.delete('/fee-details/:id', managerControllers.deleteFeeDetail);
 
-router.post('/vehicle-detail/:id', managerControllers.addVehicleDetail);
-router.put('/vehicle-detail/:id', managerControllers.updateVehicleDetail);
-router.delete('/vehicle-detail/:id', managerControllers.deleteVehicleDetail);
+router.post('/vehicle-details', managerControllers.addVehicleDetail);
+router.put('/vehicle-details/:id', managerControllers.updateVehicleDetail);
+router.delete('/vehicle-details/:id', managerControllers.deleteVehicleDetail);
 
-router.post('/resident', managerControllers.addResident);
-router.put('/resident/:id', managerControllers.updateResident);
-router.delete('/resident/:id', managerControllers.deleteResident);
+router.post('/residents', managerControllers.addResident);
+router.put('/residents/:id', managerControllers.updateResident);
+router.delete('/residents/:id', managerControllers.deleteResident);
 
 router.post(
-	'/voluntary-contribution',
+	'/voluntary-contributions',
 	managerControllers.addVoluntaryContribution,
 );
 router.put(
-	'/voluntary-contribution/:id',
+	'/voluntary-contributions/:id',
 	managerControllers.updateVoluntaryContribution,
 );
 router.delete(
-	'/voluntary-contribution/:id',
+	'/voluntary-contributions/:id',
 	managerControllers.deleteVoluntaryContribution,
 );
 

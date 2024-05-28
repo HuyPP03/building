@@ -7,7 +7,7 @@ router.get('/fees', publicControllers.getFees);
 
 router.get('/vehicle-types', publicControllers.getVehicleTypes);
 
-router.get('households', publicControllers.getHouseholds);
+router.get('/households', publicControllers.getHouseholds);
 
 router.get('/households/:id', publicControllers.getHousehold);
 

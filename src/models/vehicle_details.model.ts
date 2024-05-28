@@ -13,7 +13,7 @@ export class Vehicle_details extends Model<
 > {
 	declare id: CreationOptional<number>;
 	declare householdId: number;
-	declare typeId: number;
+	declare vehicleTypeId: number;
 	declare registrationNumber: string;
 	declare createdAt: CreationOptional<Date>;
 	declare updatedAt: CreationOptional<Date>;
@@ -30,7 +30,7 @@ export class Vehicle_details extends Model<
 					type: DataTypes.INTEGER,
 					allowNull: false,
 				},
-				typeId: {
+				vehicleTypeId: {
 					type: DataTypes.INTEGER,
 					allowNull: false,
 				},

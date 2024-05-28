@@ -66,7 +66,7 @@ Vehicle_details.belongsTo(Households);
 
 Vehicle_types.hasMany(Vehicle_details);
 
-Vehicle_details.belongsTo(Vehicle_types);
+Vehicle_details.belongsTo(Vehicle_types, { foreignKey: 'vehicleTypeId' });
 
 Residents.hasMany(Voluntary_contributions);
 

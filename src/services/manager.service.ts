@@ -1,4 +1,4 @@
-import { db } from 'src/loaders/database.loader';
+import { db } from '../loaders/database.loader';
 
 //household
 export const addHousehold = async (
@@ -103,12 +103,12 @@ export const deleteFeeDetail = async (id: number) => {
 //vehicle details
 export const addVehicleDetail = async (
 	householdId: number,
-	typeId: number,
+	vehicleTypeId: number,
 	registrationNumber: string,
 ) => {
 	const newVehicleDetail = await db.vehicleDetails.create({
 		householdId,
-		typeId,
+		vehicleTypeId,
 		registrationNumber,
 	});
 	return newVehicleDetail;
@@ -117,13 +117,13 @@ export const addVehicleDetail = async (
 export const updateVehicleDetail = async (
 	id: number,
 	householdId: number,
-	typeId: number,
+	vehicleTypeId: number,
 	registrationNumber: string,
 ) => {
 	const updatedVehicleDetail = await db.vehicleDetails.update(
 		{
 			householdId,
-			typeId,
+			vehicleTypeId,
 			registrationNumber,
 		},
 		{

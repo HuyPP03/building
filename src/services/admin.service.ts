@@ -39,11 +39,12 @@ export const updateUser = async (
 	password: string,
 	role: number,
 ) => {
+	const hashPassword = await EncUtil.createHash(password);
 	const user = await db.users.update(
 		{
 			name,
 			email,
-			password,
+			password: hashPassword,
 			role,
 		},
 		{
